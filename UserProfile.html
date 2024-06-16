@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name = "Userprofile">
+    <title>User Profile</title>
+    <script src = "jquery-3.7.1.js"></script>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            border: 1px solid black;
+            width:1300px;
+            height: 1000px;
+            margin: auto;
+            background-color: #222222;
+
+            .personalize{
+                display:flex;
+                justify-content: center;
+                width: inherit;
+
+                .background-image{
+                    z-index: -1;
+                }
+                .avatar{
+                    border: none;
+                    border-radius: 50%;
+                    z-index: 2;
+                    width: 160px;
+                    height: 160px;
+                    position: absolute;
+                    inset: 150px 760px;
+                    box-shadow: 0 0 1px 6px white;
+                }
+            }
+            .information{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                width: inherit;
+
+                .profile{
+                    width: 1000px;
+                    height: 750px;
+                    background-color: rgba(250,250,210,10%);
+                }
+                .list{
+                    border: 1px solid forestgreen;
+                    padding-left: 70px;
+                    width: 300px;
+                    height: 750px;
+                    background-color: rgba(255,255,255,60%);
+
+                    ul{
+                        line-height: 4.5;
+                    }
+                }
+            }
+
+        }
+
+    </style>
+</head>
+
+<body id = "container">
+    <div class = "personalize">
+        <img src="https://picsum.photos/1300/250?grayscale" alt="背景图片" class = "background-image">
+        <img src="390263d2fd.jpg" alt = "我的头像" class = "avatar">
+    </div>
+    <div class = "information">
+        <div class = "profile"></div>
+        <div class = "list">
+            <ul>
+                <li>object 1</li>
+                <li>object 2</li>
+                <li>object 3</li>
+                <li>object 4</li>
+                <li>object 5</li>
+                <li>object 6</li>
+                <li>object 7</li>
+                <li>object 8</li>
+                <li>object 9</li>
+                <li>object 10</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        $(window).load(function () {
+            $('#container').hide();
+        });
+    </script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</body>
+
+</html>
